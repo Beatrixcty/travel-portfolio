@@ -1,7 +1,8 @@
-// Prepends the Vite base URL so paths work on GitHub Pages (/travel-portfolio/)
+// Prepends the base path so paths work on GitHub Pages (/travel-portfolio/)
 export function imgUrl(path) {
   if (!path || path.startsWith('http')) return path
-  return import.meta.env.BASE_URL + path.replace(/^\//, '')
+  const base = window.location.hostname === 'localhost' ? '' : '/travel-portfolio'
+  return base + (path.startsWith('/') ? path : '/' + path)
 }
 
 // Returns the city's own coverImage if set, otherwise pulls a photo from
