@@ -72,6 +72,7 @@ function Map() {
               key={country.id}
               position={position}
               icon={createCountryIcon(country.emoji, zoom)}
+              riseOnHover
               eventHandlers={{ click: () => navigate(`/countries/${country.id}`) }}
             >
               <Tooltip direction="top" offset={[0, -40]}>
@@ -90,6 +91,7 @@ function Map() {
                   key={`${c.id}-${city.name}`}
                   position={city.coordinates}
                   icon={createCityIcon()}
+                  riseOnHover
                   eventHandlers={{  }}
                 >
                   <Tooltip direction="top" offset={[0, -16]}>

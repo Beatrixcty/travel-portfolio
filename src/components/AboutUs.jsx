@@ -1,11 +1,12 @@
 // src/components/AboutUs.jsx
+import { imgUrl } from '../utils/cityImage'
 import "./AboutUs.css";
 
 function AboutUs() {
   return (
     <section className="about-us">
       <div className="about-us-image">
-        <img src="/images/us.png" alt="B and H"/>
+        <img src={imgUrl('/images/us.png')} alt="B and H"/>
       </div>
       <div className="about-us-text">
         <p className="about-us-tag">Our Story</p>
