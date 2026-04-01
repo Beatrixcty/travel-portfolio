@@ -21,7 +21,7 @@ export const countries = [
       mustDo: "Eat, Take the Tram",
     },
     description:
-      "A city that shaped who I am, full of memories I carry everywhere.",
+      "A city that shaped who I am, full of memories I carry everywhere",
     unforgettableStories:
       "During the lockdown, we decided to give hiking a try. It was a steep learning curve; after one particularly memorable trek in 33°C heat, I realized my strengths were definitely better suited for flat ground than mountain summits. We’ve since retired my hiking boots in favor of urban exploration. \n\nNow, we return to Hong Kong every year or two to revisit our favorite local spots, sticking to the best snacks and the most scenic (and flat) walks!",
   },
@@ -44,7 +44,7 @@ export const countries = [
       mustDo: "Get lost in the cobblestone streets ",
     },
     description:
-      "A country that captured our hearts and slowly became our home away from home.",
+      "A country that captured our hearts and slowly became our home away from home",
     unforgettableStories:
       "Coming from Hong Kong, switching from a 6:30 PM dinner to the local 8:30 PM start was a struggle. I’ve finally made peace with the late-night schedule, though I still keep a 'survival snack' handy just in case. Five Christmases later, I’m officially used to the local pace and ready to call Portugal home.",
     cities: [
@@ -209,7 +209,7 @@ export const countries = [
     dates: "Mar 2022, Mar 2026",
     totalDuration: "1.5 months",
     highlights: { favoriteCity: "", bestFood: "Coxinha, Churrasco", mustDo: "Have Churrasco" },
-    description: "Food, family, and very kind people.",
+    description: "Food, family, and very kind people",
     unforgettableStories: "During our 2026 trip to Salvador, we decided to take a scenic coastal walk toward the historical center. What looked like a straightforward route on the map turned out to be much more isolated than we expected.\n\nHemmed in by the ocean on one side and a busy road on the other, we found ourselves in an area with many people living in difficult conditions, and the atmosphere felt quite unpredictable. It was a tense 20-minute walk where we had to stay focused and keep moving until we reached a busier district. It was a stark reminder to always cross-reference digital maps with local advice before heading out on foot!",
     cities: [
       {
