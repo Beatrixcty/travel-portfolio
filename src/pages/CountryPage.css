@@ -132,6 +132,7 @@
   height: 160px;
   object-fit: cover;
   display: block;
+  filter: blur(0.4px) brightness(0.97);
 }
 
 .country-city-thumb-placeholder {
