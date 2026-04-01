@@ -20,10 +20,8 @@
   height: 180px;
   object-fit: cover;
   display: block;
-  object-position: top;  
-object-position: bottom;
-object-position: 50% 20%;
-
+  object-position: 50% 20%;
+  filter: blur(0.4px) brightness(0.97);
 }
 
 .country-card-info {
