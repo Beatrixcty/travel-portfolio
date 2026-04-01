@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { countries } from '../data/countries'
+import { imgUrl } from '../utils/cityImage'
 import Footer from '../components/Footer'
 import './CountryPage.css'
 
@@ -18,11 +19,11 @@ const stagger = {
 // Fetches all city images at once so the lightbox can use them too
 function useCityImages(cities) {
   const [images, setImages] = useState(() =>
-    Object.fromEntries(cities.map(c => [c.name, c.coverImage || null]))
+    Object.fromEntries(cities.map(c => [c.name, c.coverImage ? imgUrl(c.coverImage) : null]))
   )
   useEffect(() => {
     cities.forEach(city => {
-      if (city.coverImage) return
+      if (city.coverImage) return // already set via imgUrl in initial state
       const title = encodeURIComponent(city.name)
       fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${title}`)
         .then(r => r.ok ? r.json() : null)
@@ -84,7 +85,7 @@ function CountryPage() {
 
       {/* ── 1. Hero ── */}
       <div className="country-hero">
-        <img src={country.coverImage} alt={country.name} className="country-hero-img" />
+        <img src={imgUrl(country.coverImage)} alt={country.name} className="country-hero-img" />
         <div className="country-hero-overlay">
           <button className="back-btn" onClick={() => navigate('/countries')}>← All Countries</button>
           <div className="country-hero-title">

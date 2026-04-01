@@ -1,3 +1,9 @@
+// Prepends the Vite base URL so paths work on GitHub Pages (/travel-portfolio/)
+export function imgUrl(path) {
+  if (!path || path.startsWith('http')) return path
+  return import.meta.env.BASE_URL + path.replace(/^\//, '')
+}
+
 // Returns the city's own coverImage if set, otherwise pulls a photo from
 // LoremFlickr (searches Flickr by keyword). The lock seed is derived from
 // the city name so the same photo always loads for the same city.

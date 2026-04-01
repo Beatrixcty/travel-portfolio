@@ -1,12 +1,13 @@
 // src/components/CountryCard.jsx
 import { Link } from 'react-router-dom'
+import { imgUrl } from '../utils/cityImage'
 import './CountryCard.css'
 
 function CountryCard({ country }) {
   return (
     <Link to={`/countries/${country.id}`} className="country-card">
       <img
-        src={country.coverImage}
+        src={imgUrl(country.coverImage)}
         alt={country.name}
         className="country-card-img"
       />
