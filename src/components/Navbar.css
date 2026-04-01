@@ -1,0 +1,87 @@
+/* ── The outer nav bar ── */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* logo on left, links on right */
+  padding: 1rem 2rem;
+  background: #FC8EAC;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;     /* stays at top when you scroll */
+  top: 0;
+  z-index: 100;         /* sits above other content */
+  flex-wrap: wrap;      /* allows mobile menu to drop below */
+}
+
+/* ── Logo / site name ── */
+.navbar-logo {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+  text-decoration: none;
+}
+
+/* ── Desktop nav links ── */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;     /* removes bullet points */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.navbar-links a:hover {
+  opacity: 0.7;
+}
+
+/* ── Hamburger button (☰) ── */
+.navbar-toggle {
+  display: none;        /* hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* ── Mobile dropdown menu ── */
+.navbar-mobile {
+  display: flex;
+  flex-direction: column;   /* links stack vertically */
+  width: 100%;              /* full width below the navbar */
+  list-style: none;
+  padding: 0.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar-mobile a {
+  display: block;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+
+.navbar-mobile a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ── Responsive: switch to hamburger on small screens ── */
+@media (max-width: 600px) {
+  .navbar-links {
+    display: none;      /* hide desktop links */
+  }
+
+  .navbar-toggle {
+    display: block;     /* show hamburger button */
+  }
+}

@@ -1,0 +1,54 @@
+/* src/components/AboutMe.css */
+
+.aboutMe {
+  padding: 80px 40px;
+  text-align: center;
+  background: var(--bg);
+}
+
+.aboutMe-tag {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.aboutMe-content h1 {
+  margin-bottom: 30px;
+
+}
+
+.aboutMe-subtitle {
+  max-width: 670px;
+  margin: 0 auto 36px;
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.aboutMe-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 32px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.aboutMe-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}

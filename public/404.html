@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Redirect to index.html, preserving the path as a query param
+      var path = window.location.pathname.replace('/travel-portfolio', '') || '/';
+      window.location.replace(
+        '/travel-portfolio/?p=' + encodeURIComponent(path) + window.location.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

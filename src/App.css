@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #fafaf8;
+  color: #222;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}

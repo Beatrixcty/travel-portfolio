@@ -1,0 +1,101 @@
+.countries-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.countries-header h1 {
+  margin-bottom: 24px;
+}
+
+.countries-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.country-search {
+  font-family: var(--sans);
+  font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
+  width: 280px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.country-search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.1);
+}
+
+.country-search::placeholder {
+  color: #bbb;
+}
+
+.continent-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.no-results {
+  color: var(--text-light, #aaa);
+  font-size: 15px;
+  grid-column: 1 / -1;
+}
+
+.filter-btn {
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: var(--accent);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: var(--sans);
+  color: white;
+  box-shadow: 0 2px 12px rgba(252, 142, 172, 0.45);
+  transition: background 0.2s, box-shadow 0.2s;
+  z-index: 100;
+}
+
+.scroll-top-btn:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 4px 18px rgba(252, 142, 172, 0.55);
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
